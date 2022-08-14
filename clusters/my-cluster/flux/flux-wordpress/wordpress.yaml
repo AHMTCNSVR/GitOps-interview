@@ -1,19 +1,19 @@
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
+---
+apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: wordpress
   namespace: wordpress
+  annotations:
+    fluxcd.io/automated: "false"
 spec:
-  interval: 5m
+  helmVersion: v3
+  releaseName: wordpress
   chart:
-    spec:
-      chart: wordpress
-      version: '15.0.16'
-      sourceRef:
-        kind: HelmRepository
-        name: wordpress
-        namespace: flux-system
-      interval: 1m
+    git: https://github.com/AHMTCNSVR/wordpress.git
+    secretRef:
+      name: git-https-credentials
+    path: wordpress
+    ref: master
   values:
-    replicaCount: 2
 
