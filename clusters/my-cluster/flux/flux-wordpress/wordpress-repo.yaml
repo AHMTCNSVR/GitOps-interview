@@ -1,8 +1,8 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: HelmRepository
+kind: GitRepository
 metadata:
   name: wordpress
   namespace: wordpress
 spec:
   interval: 1m
-  url: https://github.com/bitnami/charts/tree/master/bitnami/wordpress
+  url: https://github.com/bitnami/charts.git
