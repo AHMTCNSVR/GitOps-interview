@@ -14,6 +14,6 @@ spec:
     secretRef:
       name: git-https-credentials
     path: wordpress
-    ref: master
+    ref: main
   values:
 
