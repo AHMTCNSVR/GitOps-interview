@@ -2,7 +2,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
   name: wordpress
-  namespace: flux-system
+  namespace: wordpress
 spec:
   interval: 1m
   url: https://github.com/AHMTCNSVR/wordpres.git
