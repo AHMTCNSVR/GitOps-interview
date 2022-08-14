@@ -1,8 +1,0 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: GitRepository
-metadata:
-  name: wordpress
-  namespace: wordpress
-spec:
-  interval: 1m
-  url: https://github.com/bitnami/charts.git
